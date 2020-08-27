@@ -10,8 +10,16 @@ namespace GeneralStoreAPIProject.Models
     {
         [Key]
         public int Id { get; set; }
-        public int CustomerId { get; set; } // Foreign Key
-        public string ProductSKU { get; set; } // Foreign Key
+
+
+        public int CustomerId { get; set; } // Foreign Key git g
+        public virtual Customer Customer { get; set; }
+
+
+        public string ProductId { get; set; } // Foreign Key
+        public virtual Product Product { get; set; }
+
+
         public int ItemCount { get; set; }
         public DateTime DateOfTransaction { get; set; }
 
